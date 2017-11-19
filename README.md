@@ -21,5 +21,6 @@ npm run build --report
 ## How to
 
 Go to https://ahoffmeyer.github.io/vue-tomato/ and just click play. 
-After each pomodoro cycle, you will add a pomodoro icon on the top left.
+After each pomodoro cycle, you will add a pomodoro icon on the bottom left.
+Get as much as you can to be the most productive person in where ever you are!
 You can also set the timer's time in the config section.
