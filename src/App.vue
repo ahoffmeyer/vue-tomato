@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <nav>
+      <router-link to="/">
+        <i class="fa fa-home" aria-hidden="true"></i>
+      </router-link>
       <button-config></button-config>
     </nav>
     <div class="app">
