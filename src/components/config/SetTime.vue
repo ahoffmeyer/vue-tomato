@@ -1,6 +1,6 @@
 <template>
     <div class="setTime">
-        <h1>Time Set to {{ currentTime }} minutes</h1>
+        <h1>Time set to {{ currentTime }} minutes</h1>
         <label for="time">Select your timer duration
             <select id="time" class="custom-select" v-model.bind="time" @change="setTime(time)">
                 <!-- inline object literal -->
