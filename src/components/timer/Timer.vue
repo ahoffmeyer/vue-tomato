@@ -1,5 +1,10 @@
 <template>
     <div class="timer">
+        <div class="progress-bar">
+            <div class="progress">
+                <div class="progress-bar bg-danger" :style="progressW" role="progressbar" :aria-valuenow="progress" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
         <div class="time">
             {{ time }}
         </div>
@@ -24,13 +29,10 @@
       name: 'Timer',
       computed: mapGetters({
         time: 'getTime',
-        running: 'getRunning'
+        running: 'getRunning',
+        progress: 'getProgress',
+        progressW: 'getPercentageW'
       }),
-      data () {
-        return {
-          msg: 'Timer'
-        }
-      },
       components: {
         Start,
         Stop,
@@ -46,5 +48,11 @@
     .start, .reset, .stop {
         display: inline-block;
         padding: .3rem;
+    }
+    .progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 15px;
     }
 </style>

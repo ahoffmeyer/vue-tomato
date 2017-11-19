@@ -15,10 +15,16 @@ const state = {
   cnfTimes: times
 }
 
+const progress = () => {
+  return Math.floor((state.time / state.total) * 100)
+}
+
 const getters = {
   getTime: state => state.time,
   getRunning: state => state.running,
-  getTimes: state => state.cnfTimes
+  getTimes: state => state.cnfTimes,
+  getProgress: state => progress(),
+  getPercentageW: state => 'width: ' + progress() + '%'
 }
 
 // recursive timer
