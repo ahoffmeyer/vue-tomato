@@ -1,6 +1,5 @@
 <template>
     <div class="config">
-        <set-config></set-config>
         <set-time></set-time>
     </div>
 </template>
