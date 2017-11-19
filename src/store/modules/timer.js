@@ -4,15 +4,21 @@ const settings = {
   'time': 25
 }
 
+const times = [
+  5, 10, 15, 20, 25
+]
+
 const state = {
   running: 0,
   total: settings.time,
-  time: settings.time
+  time: settings.time,
+  cnfTimes: times
 }
 
 const getters = {
   getTime: state => state.time,
-  getRunning: state => state.running
+  getRunning: state => state.running,
+  getTimes: state => state.cnfTimes
 }
 
 // recursive timer
@@ -31,6 +37,12 @@ const interval = ({ commit }) => setTimeout(() => {
 }, 1000 * 60)
 
 const actions = {
+  setTime ({ commit }, time) {
+    // reset the current timer
+    commit(types.RESET_TIMER)
+    // then set a new time
+    commit(types.SET_TIME, time)
+  },
   startTimer ({ commit }) {
     commit(types.START_TIMER)
     interval({ commit })
@@ -44,6 +56,9 @@ const actions = {
 }
 
 const mutations = {
+  [types.SET_TIME] (state, time) {
+    state.total = state.time = time
+  },
   [types.RESET_TIMER] (state) {
     state.running = 0
     state.time = state.total
