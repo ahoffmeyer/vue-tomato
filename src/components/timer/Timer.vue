@@ -54,5 +54,8 @@
         top: 0;
         left: 0;
         height: 15px;
+        background: #eee;
+        width: 100%;
+        height: 15px;
     }
 </style>
