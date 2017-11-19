@@ -1,7 +1,7 @@
 import * as types from '../mutations'
 
 const settings = {
-  'time': 5
+  'time': 25
 }
 
 const state = {
@@ -28,7 +28,7 @@ const interval = ({ commit }) => setTimeout(() => {
   } else {
     commit(types.RESET_TIMER)
   }
-}, 1000)
+}, 1000 * 60)
 
 const actions = {
   startTimer ({ commit }) {

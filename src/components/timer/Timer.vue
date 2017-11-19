@@ -41,7 +41,7 @@
 
 <style>
     .time {
-        font-size: 5rem;
+        font-size: 6rem;
     }
     .start, .reset, .stop {
         display: inline-block;
