@@ -12,7 +12,8 @@ const state = {
   running: 0,
   total: settings.time,
   time: settings.time,
-  cnfTimes: times
+  cnfTimes: times,
+  tomato: []
 }
 
 const progress = () => {
@@ -24,7 +25,8 @@ const getters = {
   getRunning: state => state.running,
   getTimes: state => state.cnfTimes,
   getProgress: state => progress(),
-  getPercentageW: state => 'width: ' + progress() + '%'
+  getPercentageW: state => 'width: ' + progress() + '%',
+  getTomatoes: state => state.tomato
 }
 
 // recursive timer
@@ -39,6 +41,7 @@ const interval = ({ commit }) => setTimeout(() => {
     return interval({ commit })
   } else {
     commit(types.RESET_TIMER)
+    commit(types.ADD_TOMATO)
   }
 }, 1000 * 60)
 
@@ -58,6 +61,9 @@ const actions = {
   },
   resetTimer ({ commit }) {
     commit(types.RESET_TIMER)
+  },
+  addTomato ({ commit }) {
+    commit(types.ADD_TOMATO)
   }
 }
 
@@ -77,6 +83,9 @@ const mutations = {
   },
   [types.COUNTDOWN_TIMER] (state) {
     return state.time--
+  },
+  [types.ADD_TOMATO] (state) {
+    return state.tomato.push(1)
   }
 }
 
