@@ -1,7 +1,7 @@
 <template>
     <div class="stop">
-        <a @click="stopTimer">
-            {{ msg }}
+        <a @click="stopTimer" class="pause-play">
+            <i class="fa fa-pause" aria-hidden="true"></i>
         </a>
     </div>
 </template>

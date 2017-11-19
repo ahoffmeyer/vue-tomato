@@ -1,9 +1,13 @@
 <template>
     <div class="timer">
-        {{ time }}
-        <start v-if="! running"></start>
-        <stop v-if="running"></stop>
-        <reset></reset>
+        <div class="time">
+            {{ time }}
+        </div>
+        <div class="pause-play-btn">
+            <start v-if="! running"></start>
+            <stop v-if="running"></stop>
+            <reset></reset>
+        </div>
     </div>
 </template>
 
@@ -34,3 +38,13 @@
       }
     }
 </script>
+
+<style>
+    .time {
+        font-size: 5rem;
+    }
+    .start, .reset, .stop {
+        display: inline-block;
+        padding: .3rem;
+    }
+</style>

@@ -1,6 +1,8 @@
 <template>
     <div class="start">
-        <a @click="resetTimer">{{ msg }}</a>
+        <a @click="resetTimer" class="pause-play">
+            <i class="fa fa-repeat" aria-hidden="true"></i>
+        </a>
     </div>
 </template>
 
