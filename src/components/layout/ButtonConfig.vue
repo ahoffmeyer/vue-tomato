@@ -13,16 +13,5 @@
 </script>
 
 <style>
-    .buttonConfig {
-        padding: 2rem;
-        position: absolute;
-        text-align: right;
-        right: 0px;
-    }
-    .buttonConfig a {
-        color: #2c3e50;
-        text-decoration: none;
-        font-size: 2rem;
-        line-height: 2rem;
-    }
+
 </style>

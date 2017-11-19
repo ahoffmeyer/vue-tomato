@@ -27,9 +27,6 @@
     margin: 0;
     padding: 0;
   }
-  nav {
-    text-align: right;
-  }
   #app {
     height: 100%;
     position: relative;
@@ -53,5 +50,18 @@
     color: #2c3e50;
     text-decoration: none;
     cursor: pointer;
+  }
+  nav {
+    padding: 2rem;
+    position: absolute;
+    z-index: 99;
+    text-align: right;
+    right: 0px;
+  }
+  nav a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 2rem;
   }
 </style>
